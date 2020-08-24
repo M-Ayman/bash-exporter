@@ -12,7 +12,7 @@ type Output struct {
 }
 
 type Schema struct {
-	Results map[string]float64 `json:"results"`
+	Results map[string]string `json:"results"`
 	Labels map[string]string `json:"labels"`
 }
 
