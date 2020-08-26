@@ -94,7 +94,7 @@ func Run(interval int, path string, names []string, labelsArr []string, debug bo
 				o.Schema.Labels["verb"] = metric
 				o.Schema.Labels["job"] = o.Job
 				fmt.Println(o.Schema.Labels)
-				verbMetrics.With(prometheus.Labels(o.Schema.Labels)).Set(float64(value))
+				verbMetrics.With(prometheus.Labels(o.Schema.Labels)).Set(string(value))
 			}
 		}
 		time.Sleep(time.Duration(interval) * time.Second)
